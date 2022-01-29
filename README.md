@@ -7,7 +7,10 @@ These are all changes to lumps and potentially other files that will be needed f
 *l01_a*
 - Added Ballista "Baliste270_2" at "-1129.061 822.25 712"
 
-- Removed func_brush "Grange_playerclip" at "1755 -85 904"
+**Removed**
+func_brush "Grange_playerclip" at "1755 -85 904"
+func_brush "PlayerClip.House" at "1631.75 -599.5 402.5"
+player_loadsaved "player_loadsaved.fallydeath" at "1744 376 748"
 
 **Changes**
 func_button "room07.door.01.lever.button" at "-1424.5 1206 456"
