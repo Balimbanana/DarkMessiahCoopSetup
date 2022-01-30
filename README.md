@@ -62,3 +62,28 @@ angles "0 90 0"
 angles "0 90 0"
 - spawnpoint_04 at "-825 1455 750" At ballistas
 angles "0 270 0"
+
+
+### l02_a
+
+**Changes**
+- weapon_arxcrossbow at "2397.77 -3646.71 -107"
+- weapon_mm_staff_wood at "2411.77 -3674 -113"
+- weapon_arxsword at "2365.44 -3890.39 -330"
+- weapon_mm_shield_guard at "2394 -3803 -341"
+- weapon_arxdaggers at "2380 -3711 -343"
+	Added infinite respawn
+- trigger_look "trigger_look_leanna" at "3135 -1217.5 -447"
+	Removed cinematic lock to allow players to move around
+- npc_Leanna "Leanna" at "3136 -1216 -490"
+	Removed reload on player damage
+	Set damage filter to ignore player
+- trigger_once "sareth_door_close" at "3615.5 -1375 -338"
+	Removed door close outputs
+- trigger_once at "2726 -1394.5 -306.5"
+	Add checkpoint outputs to 01
+
+**Checkpoints**
+- spawnpoint_00 at "2181 -3972 -139"
+angles "0 45 0"
+- spawnpoint_01 at "2600 -1445 -452"
