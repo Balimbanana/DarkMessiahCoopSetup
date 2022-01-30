@@ -4,7 +4,8 @@ These are all changes to lumps and potentially other files that will be needed f
 
 
 # ChangeLog:
-*l00*
+### l00
+
 **Changes**
 - trigger_once at "1408 204 -256"
 	Removed output that closes the door behind you.
@@ -28,7 +29,8 @@ angles "0 90 0"
 - spawnpoint_02 at "1405 -1335 40" At the zombie kick off part
 angles "0 90 0"
 
-*l01_a*
+### l01_a
+
 - Added Ballista "Baliste270_2" at "-1129.061 822.25 712"
 
 **Removed**
