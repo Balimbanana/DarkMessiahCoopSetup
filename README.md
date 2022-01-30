@@ -66,6 +66,9 @@ angles "0 270 0"
 
 ### l02_a
 
+**Removed**
+- player_loadsaved "Gestion_dead_reload" at "2284 -3791 -40"
+
 **Changes**
 - weapon_arxcrossbow at "2397.77 -3646.71 -107"
 - weapon_mm_staff_wood at "2411.77 -3674 -113"
@@ -80,6 +83,9 @@ angles "0 270 0"
 	Set damage filter to ignore player
 - trigger_once "sareth_door_close" at "3615.5 -1375 -338"
 	Removed door close outputs
+- logic_relay "Gestion_relationship" at "2284 -3790 -58"
+	Added output to keep required guards friendly
+	Added output to delete logic_autosave to prevent saving after guards are hostile
 - trigger_once at "2726 -1394.5 -306.5"
 	Add checkpoint outputs to 01
 
@@ -87,3 +93,22 @@ angles "0 270 0"
 - spawnpoint_00 at "2181 -3972 -139"
 angles "0 45 0"
 - spawnpoint_01 at "2600 -1445 -452"
+
+### l02_b1
+
+**Changes**
+- npc_Leanna "Leanna" at "3136 -1216 -490"
+	Removed reload on player damage
+	Set damage filter to ignore player
+- npc_necro_guard "tim" at "-3420 -12804 32.9032"
+	Add checkpoint outputs to 01 OnDeath
+- trigger_once" at "-3492 -10892 159"
+	Add checkpoint outputs to 02
+
+**Checkpoints**
+- spawnpoint_00 at "-4815 -10825 305"
+angles "0 270 0"
+- spawnpoint_01 at "-3040 -13035 45"
+angles "0 35 0"
+- spawnpoint_02 at "-3575 -10875 105"
+angles "0 270 0"
