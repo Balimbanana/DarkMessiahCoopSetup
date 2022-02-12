@@ -32,7 +32,7 @@
 
 
 // Might and Magic Server Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Fri Feb 11 11:18:16 AM
+// File generated:  Fri Feb 11 11:44:55 PM
 //
 //
 // Cvar	-	Setting
@@ -93,13 +93,15 @@ DESCRIPTION SERVER_OPTIONS
 
 	"mm_start_as_class"
 	{
-		"Start with equipment base"
+		"Start with equipment base:"
 		{
 			LIST
-			"#GameUI_Disabled" "0"
-			"#GameUI_Enabled" "1"
+			"None" "0"
+			"Warrior" "1"
+			"Wizard" "1"
+			"Assassin" "1"
 		}
-		{ "1" }
+		{ "0" }
 	}
 
 }
