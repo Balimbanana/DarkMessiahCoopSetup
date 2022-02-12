@@ -102,7 +102,7 @@ angles "0 45 0"
 - Set damage filter to ignore player
 ##### npc_necro_guard "tim" at "-3420 -12804 32.9032"
 - Add checkpoint outputs to 01 OnDeath
-##### trigger_once" at "-3492 -10892 159"
+##### trigger_once at "-3492 -10892 159"
 - Add checkpoint outputs to 02
 
 ***Checkpoints***
@@ -111,4 +111,46 @@ angles "0 270 0"
 - spawnpoint_01 at "-3040 -13035 45"
 angles "0 35 0"
 - spawnpoint_02 at "-3575 -10875 105"
+angles "0 270 0"
+
+### l02_b2
+
+##### Added trigger_once at "-3474 -12171 109"
+- Set up to unlock the kitchen doors
+
+***Changes***
+##### trigger_changelevel landmark "b1toB2bis"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### kitchen_door_big1 and kitchen_door_big2
+- Added functionality to open door by a trigger on the other side of it.
+##### func_door_rotating "kitchen_out_door" at "-3265 -11737 152"
+- Add checkpoint outputs to 01
+
+***Checkpoints***
+- spawnpoint_00 at "-3575 -11195 -125"
+angles "0 270 0"
+- spawnpoint_01 at "-3142 -11695 -50"
+angles "0 270 0"
+
+### l03_a
+
+***Removed***
+- trigger_once at "-1017 3205 173.5" causes rope to break
+
+***Changes***
+##### trigger_once at "672 1937.5 -76"
+- Added checkpoint outputs to 01
+##### trigger_multiple at "-252 3872 9"
+- Added checkpoint outputs to 02
+##### trigger_once at "-1014.5 2775 219"
+- Added checkpoint outputs to 03
+
+***Checkpoints***
+- spawnpoint_00 at "2016 1184.01 -24"
+angles "0 180 0"
+- spawnpoint_01 at "680 1955 -80"
+angles "0 260 0"
+- spawnpoint_02 at "-252 -3872 -10"
+angles "0 190 0"
+- spawnpoint_03 at "-1040 2765 165"
 angles "0 270 0"
