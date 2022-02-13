@@ -250,14 +250,44 @@ angles "0 0 0"
 
 ### l05_a
 
+##### Added trigger_multiple at "808 8434.5 -491" allow more players to fall without fall damage
+- Also sets checkpoint to 02
+
+***Removed***
+##### trigger_multiple at "-200 3400 -300" causes area portals to close
+##### trigger_multiple at "-441 3872 -640" causes area portals to close
+
 ***Changes***
 ##### npc_Leanna "npc_Leanna" at "-151.522 1051.95 -985.998"
 - Removed reload on player damage
 - Set damage filter to ignore player
-##### npc_wizard's
+##### npc_wizard's and npc_human_guard's
 - Removed reload on player damage
 - Set damage filter to ignore player
+##### trigger_once at "-348 4416 -793.5"
+- Added checkpoint outputs to 01
+##### trigger_once at "-1040 9641 -153"
+- Added checkpoint outputs to 03
+##### weapon_arxcrossbowrope "rope_bow"
+- Added infinite respawn
 
 ***Checkpoints***
 - spawnpoint_00 at "504 -918 -1073"
 angles "0 91 0" parented to "boat"
+- spawnpoint_01 at "-530 4275 -820" at first cinematic for orcs
+angles "0 30 0"
+- spawnpoint_02 at "780 8350 -685" After drop in to temple
+angles "0 90 0"
+- spawnpoint_03 at "-1045 8850 -333" After dragon appearance
+angles "0 90 0"
+
+### l05_b
+
+***Changes***
+##### npc_Leanna "npc_Leanna" at "232 1570 247"
+- Removed reload on player damage
+- Set damage filter to ignore player
+
+***Checkpoints***
+- spawnpoint_00 at "78 547 332"
+angles "0 90 0"
