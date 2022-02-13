@@ -154,3 +154,110 @@ angles "0 260 0"
 angles "0 190 0"
 - spawnpoint_03 at "-1040 2765 165"
 angles "0 270 0"
+
+### l03_b
+
+##### Added point_teleport "teleport_players" at "3460 1088 -1345"
+
+
+***Removed***
+- trigger_multiple at "3460 1028 -1300" causes villagers to not be attacked
+
+***Changes***
+##### trigger_changelevel landmark "l03_atob"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### func_occluder "occluder.warehouse"
+- Changed name to occluder.warehousenoclose so it doesn't close when players reach different areas than others
+##### logic_relay "scene.xana_warning.relay"
+- Added teleport all players (teleport_players) to trigger position for cinematic
+##### trigger_once at "3472 1080 -1573"
+- Added global reset for villager attack just in case
+- Removed fade
+- Removed changelvl.toL4_brush block
+##### trigger_multiple at "-1176 972 -837.5"
+- Added checkpoint outputs to 01
+##### trigger_once at "-904 952 -816"
+- Added checkpoint outputs to 02
+##### trigger_once at "3160 728 -1378"
+- Added checkpoint outputs to 03
+
+***Checkpoints***
+- spawnpoint_00 at "196 209 -342"
+angles "0 101 0"
+- spawnpoint_01 at "-1183 895 -895" in first trap door tunnel
+angles "0 270 0"
+- spawnpoint_02 at "-915 920 -828" after entering second trap door tunnel
+angles "0 70 0"
+- spawnpoint_03 at "3130 740 -1450" outside menalag's area
+angles "0 10 0"
+
+### l04_b
+
+##### Added point_teleport "teleport_players_end" at "-1350 -2260 -1136"
+
+***Changes***
+##### npc_Leanna "npc_Leanna" at "748 -4559 -1482.61"
+- Removed reload on player damage
+- Set damage filter to ignore player
+##### npc_wizard "R49A_wizard_Kojak" at "696 -4509 -1482.31"
+- Removed reload on player damage
+- Set damage filter to ignore player
+##### trigger_once "fermeture_caisse" at "868 -3956.5 -1314"
+- Removed door closing outputs
+- Added checkpoint outputs to 01
+##### trigger_multiple "disable_rush01" at "853 -4646 -1354.5"
+- Changed OnEndTouch to OnEndTouchAll
+##### npc_necro_guard "R12_necroGuardPatrol_02" at "-1326 -4241 -1589"
+- Added checkpoint outputs to 02 OnDeath
+##### func_door_rotating "R22A_door" at "-1667 -4061 -1542"
+- Added checkpoint outputs to 03
+##### trigger_once "R31_trigger_general" at "-1616 -2308 -1279"
+- Added checkpoint outputs to 04
+##### trigger_once at "-1630 -3527.5 -1254"
+- Added checkpoint outputs to 05
+##### Fixup to ballistas base and nose props
+- Baliste0_1_prop Baliste0_2_prop Baliste0_3_prop
+##### logic_choreographed_scene "leanna_good_luck" at "868 -4111 -1284"
+- Removed effect for crate
+##### point_teleport "point_teleport_0*"
+- Changed to !activator teleports for ballistas
+##### trigger_multiple at "-1536 -3008 -1904"
+- Changed OnEndTouch to OnEndTouchAll
+##### trigger_multiple "r49_trig_ballistes_vs_player" at "-592 -3248 -1256"
+- Changed OnEndTouch to OnEndTouchAll
+##### func_door_rotating "porte_close_03" at "-2035 -2465.69 -1270.62"
+- Added output to stop npc ballistas OnOpen
+##### func_door_rotating "R31_35_door" at "-1344.9 -2462.76 -1270.87"
+- Added output to stop npc ballistas OnOpen
+##### func_door_rotating "porte_close_01" at "-1793 -2466.69 -1270.87"
+- Added output to stop npc ballistas OnOpen
+##### math_counter "end" at "-1314 -2224 -1089"
+- Added teleport all players
+
+***Checkpoints***
+- spawnpoint_00 at "2196 -4656 -1503"
+angles "0 180 0"
+- spawnpoint_01 at "1025 -4182 -1416" after leanna opens door
+angles "0 150 0"
+- spawnpoint_02 at "-1333 -4155 -1404" at entrance of ship
+angles "0 250 0"
+- spawnpoint_03 at "-1690 -4200 -1550" inside room with food
+angles "0 90 0"
+- spawnpoint_04 at "-1725 -2285 -1550" at bottom of ladder leading to ballistas
+angles "0 0 0"
+- spawnpoint_05 at "-1942 -3473 -1264" entrance to top of ship
+angles "0 0 0"
+
+### l05_a
+
+***Changes***
+##### npc_Leanna "npc_Leanna" at "-151.522 1051.95 -985.998"
+- Removed reload on player damage
+- Set damage filter to ignore player
+##### npc_wizard's
+- Removed reload on player damage
+- Set damage filter to ignore player
+
+***Checkpoints***
+- spawnpoint_00 at "504 -918 -1073"
+angles "0 91 0" parented to "boat"
