@@ -7,6 +7,14 @@
 		"OnlyInGame" "1"
 	}
 	
+	"2"
+	{
+		"label" "#GameUI_GameMenu_PlayerList"
+		"command" "OpenPlayerListDialog"
+		"OnlyInGame" "1"
+		"notsingle" "1"
+	}
+	
 	"3"
 	{
 		"label" "#GameUI_GameMenu_Disconnect"
