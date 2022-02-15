@@ -1,7 +1,13 @@
 # Dark Messiah Coop Setup
 These are all changes to lumps and potentially other files that will be needed for co-op compatibility.
 
-
+### Installation:
+- Place everything in this repo inside:
+- Dark Messiah Might and Magic Single Player\mm_tempcontent
+- Create the directory mm_tempcontent if it doesn't exist. Now right click Dark Messiah Single Player on Steam and go to:
+- Properties... > General > Launch Options and set it to: `-tempcontent`
+- Now if all goes well, you should be able to start up Dark Messiah Single Player and see the Create Server button in the main menu.
+- If you want to disable all the changes, just simply remove the launch option and it will start up in regular single player.
 
 # ChangeLog:
 ### l00
