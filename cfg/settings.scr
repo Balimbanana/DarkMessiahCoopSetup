@@ -90,6 +90,17 @@ DESCRIPTION SERVER_OPTIONS
 		}
 		{ "0" }
 	}
+	
+	"mm_game_hard_difficulty"
+	{
+		"Hardcore Mode"
+		{
+			LIST
+			"#GameUI_Disabled" "0"
+			"#GameUI_Enabled" "1"
+		}
+		{ "0" }
+	}
 
 	"mm_start_as_class"
 	{

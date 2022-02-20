@@ -289,11 +289,132 @@ angles "0 90 0"
 
 ### l05_b
 
+***Added***
+##### env_global's for transition back from multiple sources
+- Sets spawnpoints and set up environments if needed
+##### trigger_teleport's at "80 562 423"
+- Used for transition positions
+
 ***Changes***
 ##### npc_Leanna "npc_Leanna" at "232 1570 247"
 - Removed reload on player damage
 - Set damage filter to ignore player
+##### func_button "porticullis_couloir.lever.button" at "2966 4077.5 412"
+- Set wait -1 and Lock so it can't be closed once opened
+##### trigger_once at "4422 3012 -72"
+- Changed to trigger_hurt
+##### trigger_multiple at "275 4540 423"
+##### trigger_multiple at "3960 4016 632"
+- Changed outputs to OnEndTouchAll
+##### trigger_multiple "PlayerZoneC" at "26 3714 424"
+- Changed outputs to OnEndTouchAll
+- Added checkpoint outputs to 01
+##### math_counter "counter_orcs dead" at "-52 4076 353"
+- Added checkpoint outputs to 02
+##### math_counter "goblin_death_counter" at "2156 4384 353"
+- Added checkpoint outputs to 03
+##### trigger_multiple at "80 4960 451"
+- Added checkpoint outputs back to 02
+##### trigger_once at "5824 2992 542"
+- Added checkpoint outputs to 01_from5c
+##### func_button "door_goblin_trap.lever.button" at "4898.5 4235 492"
+- Prevent use as it could block players
+##### ambient_generic "SND_Heal_Life" at "6726 5190 1098"
+##### ambient_generic "SND_Heal_Mana" at "6715 2862 1086"
+- Removed spawnflag for Play Everywhere (1)
+##### trigger_regen's
+- Changed OnEndTouch to OnEndTouchAll
+##### trigger_changelevel "Changelevel_L05B_L07A"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
 
 ***Checkpoints***
-- spawnpoint_00 at "78 547 332"
+- spawnpoint_00_from5a at "78 547 332"
+angles "0 90 0"
+- spawnpoint_01 at "40 3640 382" just before main altar
+angles "0 90 0"
+- spawnpoint_02 at "200 4105 382" in main altar room
+angles "0 120 0"
+- spawnpoint_03 at "1450 4380 382" by the first goblin room
+angles "0 0 0"
+
+- spawnpoint_00_from5c at "3190 5475 105" entrance from 5c
+angles "0 280 0"
+- spawnpoint_01_from5c at "6143 2910 710" just before goblin area
+angles "0 0 0"
+
+- spawnpoint_00_from7a at "850 4295 4715"
+angles "0 90 0"
+- spawnpoint_01_from7a at "1155 4995 4715" on elevator from 07?
+angles "0 0 0" parentname "elevator_C"
+
+##### Might have to change prop_physics at "1160 5000 4664" to a prop_dynamic solid 6 for elevator if it kills players
+
+### l05_c
+
+***Changes***
+##### trigger_once at "984 6683.5 436"
+- Added checkpoint outputs to 01
+
+***Checkpoints***
+- spawnpoint_00 at "80.9556 5291.09 205"
+angles "0 90 0"
+- spawnpoint_01 at "490 6730 210"
+angles "0 0 0"
+
+### l07_a
+
+***Added***
+##### trigger_teleport "teleport_start_7b" at "4455 4099 1145"
+- Used when transitioning back
+
+***Changes***
+##### trigger_changelevel landmark "info_landmark_to_L07"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_multiple's
+- Removed outputs closing portal.elevator and portal.halfway
+##### trigger_once at "3704 -1320 2436"
+##### trigger_once at "7144 384 7204"
+##### trigger_once at "2968 984 6960"
+##### trigger_once "TRIGG_player_Load_Save" at "2992 1168 786"
+- Changed to trigger_hurt
+##### trigger_once "r21_trigg_SON_oiseaux" at "3160 1520 2204"
+- Added checkpoint outputs to 01
+##### trigger_once "r23b_SPAWNdest_place_kill" at "4052 -116 2978"
+- Added checkpoint outputs to 02
+
+***Checkpoints***
+- spawnpoint_00 at "4380 3888 971"
+angles "0 270 0"
+- spawnpoint_01 at "3380 1450 2170" by the elevator
+angles "0 180 0"
+- spawnpoint_02 at "4080 -1205 3050" across the rope bridge
+angles "0 90 0"
+- spawnpoint_00_from7b at "4273 360 3670"
+angles "0 180 0"
+- spawnpoint_elevator at "4070 1862 2170"
+angles "0 270 0" parentname "elevator_21A"
+
+### l07_b
+
+***Added***
+##### func_brush "backtrack" at "4152 232 4355"
+
+***Changes***
+##### trigger_once at "2589.38 4684.98 3922.05"
+- Changed to trigger_hurt
+##### trigger_multiple at "4280 105 4477"
+- Removed outputs closing portal.forgehouse, portal.lasthouse, portal.forge and portal.halfway
+##### trigger_once at "3400 2090 5661.5"
+- Added checkpoint outputs to 01
+##### func_button "lever1.button" at "4521.5 1088 5240"
+- Prevent multiple use
+- Added output to remove backtrack block
+- Added checkpoint outputs to 02
+
+***Checkpoints***
+- spawnpoint_00 at "4280 105 4477"
+angles "0 180 0"
+- spawnpoint_01 at "3355 1910 5622"
+angles "0 90 0"
+- spawnpoint_02 at "4430 1060 5189"
 angles "0 90 0"
