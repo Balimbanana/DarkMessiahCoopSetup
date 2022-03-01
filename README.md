@@ -418,3 +418,79 @@ angles "0 180 0"
 angles "0 90 0"
 - spawnpoint_02 at "4430 1060 5189"
 angles "0 90 0"
+
+### l08_a1
+
+***Changes***
+##### trigger_changelevel landmark "info_landmark_to_L08"
+##### trigger_changelevel landmark "lich_climb"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### prop_physics "gem1", "gem2", "gem3", and "gem4"
+- Made infinite respawn until socketed, then remove all
+##### prop_physics "gem4" at "0 -1284 -852"
+- Added checkpoint outputs to 02 once socketed
+##### trigger_multiple at "-2524.08 -783 -3195.5"
+- Changed to trigger_hurt
+##### func_button "funcBut_Aq" at "-1838 -786 -1632"
+##### func_button "funcBut_Ac" at "-594 -510 -888"
+- Changed to only open
+##### trigger_once "Master_Trigger" at "589 -591.5 -638.5"
+- Added checkpoint outputs to 01
+##### logic_case "gem_logic_cases" at "-170 -560 -499"
+- Teleport all players in front of spider statue for sequence
+##### trigger_once at "0 -2080 -496.5"
+- Removed outputs that close door
+
+***Checkpoints***
+- spawnpoint_00 at "1383 258 -192"
+angles "0 0 0"
+- spawnpoint_01 at "930 -572 -695" at first drop down
+angles "0 180 0"
+- spawnpoint_02 at "215 -772 -482" at spider statue room
+angles "0 135 0"
+- spawnpoint_00_from8b at "-1778 625 -1490"
+angles "0 180 0"
+
+### l08_a2
+
+***Removed***
+##### trigger_once at "-2760 2056 -1756"
+- Removes a bunch of things after dropping past it.
+
+***Changes***
+##### trigger_changelevel landmark "L08_A1toL08_A2_1"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### func_button "funcBut_Bc" at "-1074 546 -973"
+- Added checkpoint outputs to 01
+- Locked lever until gem is aquired
+
+***Checkpoints***
+spawnpoint_00 at "-1815 1643 -599"
+angles "0 0 0"
+spawnpoint_01 at "-1755 450 -1422" just after big door to lower crypt
+angles "0 180 0"
+
+### l08_b
+
+***Added***
+##### trigger_teleport at "657 562 -490", "-587 562 -490", and "885 572 -732"
+- Teleports all players outside the lich room in to the lich room
+
+***Removed***
+##### trigger_multiple at "887 406 -581"
+- Closes multiple area portals
+
+***Changes***
+##### trigger_changelevel landmark "from_l8_a"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_multiple at "2045 966.5 -612"
+- Changed outputs to OnEndTouchAll
+##### trigger_once at "2050 -148.5 -491.5"
+- Added checkpoint outputs to 01
+- Added output to teleport all players outside arena
+
+***Checkpoints***
+spawnpoint_00 at "325.12 -251.091 505"
+angles "0 180 0"
+spawnpoint_01 at "" in the lich room
+angles "0 0 0"
