@@ -465,9 +465,9 @@ angles "0 180 0"
 - Locked lever until gem is aquired
 
 ***Checkpoints***
-spawnpoint_00 at "-1815 1643 -599"
+- spawnpoint_00 at "-1815 1643 -599"
 angles "0 0 0"
-spawnpoint_01 at "-1755 450 -1422" just after big door to lower crypt
+- spawnpoint_01 at "-1755 450 -1422" just after big door to lower crypt
 angles "0 180 0"
 
 ### l08_b
@@ -490,7 +490,52 @@ angles "0 180 0"
 - Added output to teleport all players outside arena
 
 ***Checkpoints***
-spawnpoint_00 at "325.12 -251.091 505"
+- spawnpoint_00 at "325.12 -251.091 505"
 angles "0 180 0"
-spawnpoint_01 at "" in the lich room
+- spawnpoint_01 at "" in the lich room
 angles "0 0 0"
+
+### l09_a
+
+***Added***
+##### trigger_multiple at "-2985 -5608 -4336"
+- Sets up start equipment/xana form and disables inventory
+
+***Changes***
+##### trigger_once at "-16 -7064.83 -3640"
+- Added checkpoint outputs to 01
+##### trigger_once at "-471 -2851 -3808"
+- Added checkpoint outputs to 02
+##### trigger_once at "-2304 520 -2616"
+- Added checkpoint outputs to 03
+##### trigger_once at "-1872 -1116 -2786.48"
+- Added checkpoint outputs to 04
+
+***Checkpoints***
+- spawnpoint_00 at "-2985 -5608 -4336"
+angles "0 45 0"
+- spawnpoint_01 at "-100 -7060 -3800" after archer
+angles "0 20 0"
+- spawnpoint_02 at "-635 -2875 -3855" before cyclops room
+angles "0 0 0"
+- spawnpoint_03 at "-2295 1182 -2265" before spider room
+angles "0 270 0"
+- spawnpoint_04 at "-273 -1335 -2854" above cyclops room
+angles "0 15 0"
+
+### l06_a
+
+***Removed***
+##### player_loadsaved
+
+***Changes***
+##### trigger_multiple "TRIGG_player_Load_Save" at "3008 -4128 -184"
+- Changed to trigger_hurt
+##### trigger_multiple "TRIGG_conditionsGOB_chat1ON" at "1149 -5171.5 364"
+- Added checkpoint outputs to 01
+
+***Checkpoints***
+- spawnpoint_00 at "1071 -1689 214"
+angles "0 0 0"
+- spawnpoint_01 at "1375 -4380 540"
+angles "0 250 0"
