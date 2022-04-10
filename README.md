@@ -344,7 +344,7 @@ angles "0 0 0"
 
 - spawnpoint_00_from7a at "850 4295 4715"
 angles "0 90 0"
-- spawnpoint_01_from7a at "1155 4995 4715" on elevator from 07?
+- spawnpoint_01_from7a at "1155 4995 4715" on elevator from 07
 angles "0 0 0" parentname "elevator_C"
 
 ##### Might have to change prop_physics at "1160 5000 4664" to a prop_dynamic solid 6 for elevator if it kills players
@@ -539,3 +539,122 @@ angles "0 15 0"
 angles "0 0 0"
 - spawnpoint_01 at "1375 -4380 540"
 angles "0 250 0"
+
+### l06_b
+
+***Added***
+##### trigger_multiple at "-2049.5 -3911.92 521.9"
+- Used to return the worm back to the starting height when starting back across the bridge.
+- Also sets spawnpoint to 01
+
+***Removed***
+##### player_loadsaved
+##### trigger_multiple "TRIGG_disappearFIN" at "-1784 -1584 664"
+- Prevents further players from progressing by brush and worm functions.
+##### func_brush "player_no_exit" at "-1883 -1584 664"
+
+***Changes***
+##### trigger_changelevel landmark "landmark_06_A_06_B"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "-2528 -3128 -88"
+- Changed to trigger_hurt
+##### trigger_once "Ver_trig_pilier_01" at "-2049.5 -3911.92 521.9"
+- Removed pilar drop outputs
+##### path_track "worm_attack_littlearch02" at "-2648 -3736 -640"
+- Moved to "-2648 -3500 -640"
+##### path_track "VerTrack_Balliste3" at "-2824 -3856 -613"
+- Moved to "-2900 -3556 -613"
+##### path_track "VerTrack_N_ARCH" at "-2592 -3880 -1164.86"
+##### path_track "VerTrack_BatSWbas02" at "-2584 -3880 -1165"
+- Moved to "-2592 -3450 -1164.86"
+- Changed angles to "0 200 0"
+##### path_track "VerTrack_poisonBatSWbas" at "-2744 -3912 -1165"
+- Moved to "-2700 -3600 -1165"
+- Changed angles to "0 200 0"
+##### prop_physics at "-3340.82 -3843.9 36.9646" and "-3295.31 -3843.9 36.9646"
+- Made indestructible so further players can still make it across
+##### trigger_multiple "VerBatSWbasTRIGG" at "-3540.84 -3813.3 70.07"
+- Added checkpoint outputs to 02
+##### trigger_once "Ver_pont_TRIGG_player" at "-3968 -2048 208"
+- Added checkpoint outputs to 03
+##### logic_relay "Ver_blocs_SWrelay" at "-3751.85 -3817.65 569"
+- Removed all outputs that block the doorway after walking through.
+
+***Checkpoints***
+- spawnpoint_00 at "448 -4176 817"
+angles "0 90 0"
+- spawnpoint_01 at "-865 -3685 630" just before bridge
+angles "0 200 0"
+- spawnpoint_02 at "-3610 -3665 135" after bridge
+angles "0 270 0"
+- spawnpoint_03 at "-5220 -2575 360" in alcove with chest
+angles "0 300 0"
+
+### l06_c
+
+***Added***
+##### trigger_teleport's "teleport_to_raft"
+- Moves all players from the start and up to the gate on to the raft.
+based on trig -341 -1394.5 -796.64
+
+***Changes***
+##### trigger_changelevel landmark "landmark_06_B_06_C"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### logic_relay "Puits_relayPUSHetc" at "-506.649 -2495.63 -1030"
+- Added checkpoint outputs to 01.
+- Added output to teleport players outside of the room via teleport_to_raft
+
+***Checkpoints***
+- spawnpoint_00 at "-1244 -1585 -624"
+angles "0 90 0"
+- spawnpoint_01 at "-295 -2406 -1030" on raft
+angles "0 270 0" parentname "PUITS_ascenceur_pour_l_echaffaud"
+
+### l06_d
+
+***Added***
+##### 2x: func_button, post, chain, wheel
+- Used for returning the carts after they reach the other side.
+
+***Changes***
+##### trigger_changelevel landmark "landmark_L06_C-L06_D"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_multiple at "1906 -4511 1846" and "4427 -4429 848"
+- Changed outputs to OnEndTouchAll
+##### trigger_once at "3440 -4128 -148" and "4424 -1792 -424"
+- Changed to trigger_hurt
+##### trigger_multiple "close.portalmuraille" at "2617.5 -4629.5 988"
+- Removed outputs that close area portals
+##### trigger_once at "4016.5 -4159 899"
+- Added checkpoint outputs to 01.
+
+***Checkpoints***
+- spawnpoint_00 at "1345 -6055 2645"
+angles "0 0 0"
+- spawnpoint_01 at "4553 -4475 870" after second cart
+angles "0 90 0"
+
+
+### l09_d
+
+***Removed***
+##### trigger_multiple at "2935.5 -338.5 1758.5"
+- Closes area portals outside.
+##### logic_branch "player_in_xana" at "-595.988 -1379.64 229.758"
+- Prevents boat scene from happening if any player enters Xana form.
+
+***Changes***
+##### trigger_changelevel landmark "landmark_L06_A_L09_D"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "2055 -363 1992"
+- Added checkpoint outputs to 01.
+##### npc_wizard and npc_human_guard
+- Made invincible to player attacks.
+##### logic_choreographed_scene "scene.xana_beach01" at "1920 -1391.16 832"
+- Removed output for message about demon form.
+
+***Checkpoints***
+- spawnpoint_00 at "5653 -654 1350"
+angles "0 90 0"
+- spawnpoint_01 at "1895 -322 1900"
+angles "0 230 0"
