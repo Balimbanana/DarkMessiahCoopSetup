@@ -658,3 +658,93 @@ angles "0 90 0"
 angles "0 90 0"
 - spawnpoint_01 at "1895 -322 1900"
 angles "0 230 0"
+
+### l10_a
+
+***Added***
+##### func_brush at "1535 -6420 676"
+- Used to make exiting water at the start slightly smoother.
+
+***Changes***
+##### trigger_once at "16 -3600 912.5"
+- Removed output to close portal (teleport_shutdown).
+- Added output to complete enter portal objective.
+- Added name "trigger_firstentry" which will be removed on transition back from l10_c
+##### trigger_once at "1120 -5536 928"
+- Added name "trigger_firstentry" which will be removed on transition back from l10_c
+##### trigger_once at "16 -444 144"
+- Changed to trigger_hurt.
+***Changes***
+##### trigger_changelevel landmark "l10_AtoL10_C_1"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+
+***Checkpoints***
+- spawnpoint_00 at "1372 -5795 710"
+angles "0 280 0"
+- spawnpoint_00_from10c at "280 2045 -25"
+angles "0 180 0"
+- spawnpoint_01_from10c at "-85 -2755 -280" at bottom of elevator
+angles "0 180 0"
+
+### l10_b
+
+***Added***
+##### trigger_multiple "key_blackorb_trigger" at "2677 6686 -568"
+- Gives orb to players that enter the room.
+
+***Removed***
+##### trigger_multiple at "3496 4920 266"
+- Disables stairs brush
+
+***Changes***
+##### trigger_changelevel landmark "MAP_AB_01"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "3496 4920 -344"
+- Added checkpoint outputs to 01.
+##### func_rot_button "bibliodoor" at "3487.5 4344.5 -480"
+- Added checkpoint outputs to 02.
+
+***Checkpoints***
+- spawnpoint_00 at "1680 3720 520"
+angles "0 0 0"
+- spawnpoint_01 at "3500 4545 5" half way down stairs
+angles "0 90 0"
+- spawnpoint_02 at "3500 4440 -490" bottom of stairs
+angles "0 270 0"
+
+### l10_c
+
+***Added***
+##### env_global for transition back to l10_a
+- Sets spawnpoints and set up environments.
+
+***Removed***
+- player_loadsaved "game_over"
+
+***Changes***
+##### trigger_changelevel landmark "MAP_AB_02"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "1040 3040 -400" and "1024 3056 456"
+- Changed to trigger_hurt
+##### trigger_once at "556 5248 1240"
+- Added checkpoint outputs to 01.
+##### func_button "Room33.door.01.lever.button" at "-816 2990.5 1172"
+- Added checkpoint outputs to 02.
+##### trigger_multiple "leanna_cocoon.trigger" at "1892 1912 -3144"
+- Moved player_in_elevator.trigger enable to this trigger.
+##### trigger_once at "452 3072 44"
+- Added checkpoint outputs to 03.
+##### func_button "Room37.door.38.lever.button" at "1078.5 4754 -572"
+- Added checkpoint outputs to 04.
+
+***Checkpoints***
+- spawnpoint_00 at "12 2310 513"
+angles "0 0 0"
+- spawnpoint_01 at "-413 4750 805" near top of first stair case
+angles "0 90 0"
+- spawnpoint_02 at "-260 3065 1160" at top of first elevator
+angles "0 180 0"
+- spawnpoint_03 at "490 3070 -60" in room where choice to save Leanna is made
+angles "0 0 0"
+- spawnpoint_04 at "1150 4835 -3085" on elevator down to spider lair
+angles "0 90 0"
