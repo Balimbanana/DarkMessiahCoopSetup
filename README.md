@@ -664,6 +664,8 @@ angles "0 230 0"
 ***Added***
 ##### func_brush at "1535 -6420 676"
 - Used to make exiting water at the start slightly smoother.
+##### trigger_teleport "teleport_start_10c" at "1372 -5795 710"
+- Used to teleport stragglers from the original start to the 10c start on transition.
 
 ***Changes***
 ##### trigger_once at "16 -3600 912.5"
@@ -674,7 +676,6 @@ angles "0 230 0"
 - Added name "trigger_firstentry" which will be removed on transition back from l10_c
 ##### trigger_once at "16 -444 144"
 - Changed to trigger_hurt.
-***Changes***
 ##### trigger_changelevel landmark "l10_AtoL10_C_1"
 - Set spawnflags 6 (2 disable touch) (4 to previous chapter)
 
@@ -748,3 +749,166 @@ angles "0 180 0"
 angles "0 0 0"
 - spawnpoint_04 at "1150 4835 -3085" on elevator down to spider lair
 angles "0 90 0"
+
+### l11_a
+
+##### Not addressed yet:
+- Xana form hate/like relations with allies.
+
+***Added***
+##### trigger_teleport at "-2226 -3338 -486"
+- Teleports players from the landmark position to the start position.
+
+***Removed***
+##### trigger_multiple "closepartie1_a" at "-880 -3200 -96"
+- Closes area portals.
+##### trigger_multiple at "268 -2060 388"
+- Closes area portals.
+
+***Changes***
+##### trigger_multiple at "-2024 -2944 -18"
+- Changed area portal conditions.
+##### trigger_once at "1440 -940 -736" and trigger_multiple at "-416 -2296 -521.5"
+- Changed to trigger_hurt.
+##### trigger_multiple at "-1600 -2704 -72"
+- Changed to only enable/spawn fire once on entry.
+##### trigger_once at "-437 -3529 -204"
+- Added checkpoint outputs to 01.
+- Moved to "-437 -3495 -204"
+##### trigger_multiple at "-1364 -2770 132"
+- Changed to trigger_once.
+- Removed area portal close.
+- Added checkpoint outputs to 02.
+##### trigger_multiple "openpartie1_a" at "-1752.5 -2957.5 -96" and "472 -1895 151" and "CS2.ZoneB" at "216 -1916 144"
+- Changed outputs to EndTouchAll.
+##### trigger_multiple at "-376 -1521.5 102.9" and "-312 -1521.5 102.9"
+- Removed area portal close.
+##### npc_villager_male "keyman.room02" at "307 -1913 106.036"
+- Removed game over outputs (apart from death).
+- Made invulnerable.
+##### npc_human_guard "HumanGuard.room02.04" at "184 -1944 104"
+- Removed game over outputs.
+- Made invulnerable.
+##### mm_player_inputs at "552 -1296 103.936"
+- Removed Xana form game over.
+##### logic_relay "Percy.2VillagerCloseDoor" at "224 -1904 112"
+- Added checkpoint outputs to 03.
+- Added teleport players outside the room for the scene.
+- Added close area portals from previous areas.
+##### logic_relay "Percy.5VillagerCloseDoor2" at "224 -1968 112"
+- Keep door open.
+##### logic_relay "Duncan_Scene.start" at "-452.307 -3500.34 -247"
+- Removed CinematicBegin.
+##### logic_choreographed_scene "HumanGuard.CS1.02.scene" at "-532 -3480 -246.427"
+- Removed CinematicEnd.
+
+***Checkpoints***
+- spawnpoint_00 at "-2272 -3140 -880"
+angles "0 75 0"
+- spawnpoint_01 at "-370 -3565 -218"
+angles "0 140 0"
+- spawnpoint_02 at "-1435 -2780 180"
+angles "0 0 0"
+- spawnpoint_03 at "287 -1933 140"
+angles "0 150 0"
+
+### l11_b1
+
+***Added***
+##### trigger_once at "9863 -6751 133"
+- Sets checkpoint to 01.
+
+***Removed***
+##### func_brush "anti_retour" at "9526.61 -6584.86 273.5"
+- Blocks bridge.
+##### logic_branch "Game_Over.IsPlayerInXana" at "8875 -6544 515"
+- Reloads game if player in Xana form.
+##### logic_relay "logic_relay_demon" at "8875 -6559 515"
+- Reloads game if player in Xana form.
+##### trigger_once at "10566.5 -6744 120"
+- Removes Percy.
+
+***Changes***
+##### trigger_once at "9020 -6487.5 440"
+- Removed clip re-enable.
+- Changed StopActionLoop to Percy's sequence.
+##### scripted_sequence "sequence_open_door3" at "8928.53 -6526 385"
+- Added output to change name to Percy's sequence to enable door to stay open at start.
+##### scripted_sequence "sequence_percy_jump" at "9307 -6464 190"
+- Removed output to drop bridge.
+##### trigger_once at "10051 -5040 -305.5" and "13834.5 -5201 -76"
+- Changed to trigger_hurt.
+##### npc_villager_male "keyman.room02" at "8924 -6529 388"
+- Removed game over outputs (apart from death).
+- Made invulnerable.
+##### scripted_sequence "percy_exit_run" at "8984 -6554 386"
+- Changed next script to run through door.
+##### trigger_once at "11687.1 -5501.5 668.18"
+- Added teleport for all players at start of cinematic.
+##### trigger_multiple "trig_portalstart02_open" at "11676 -6552 360"
+- Removed area portal closes.
+- Added checkpoint outputs to 02.
+##### trigger_multiple at "11676 -6521 360", "12436 -6788 496", "10064 -6744 384", "10096 -6744 384", "10480 -5397.04 448", "11213.9 -5230 240", "11126 -5226.5 280", "11960 -6706 360", "11536 -3952 172"
+- Removed area portal closes.
+##### trigger_multiple at "11340.3 -4544.57 240"
+- Removed brush disable from leaving area.
+##### trigger_multiple at "11536 -4040 172"
+- Added checkpoint outputs to 03.
+
+***Checkpoints***
+- spawnpoint_00 at "8846 -6528 385"
+angles "0 300 0"
+- spawnpoint_01 at "9880 -6735 135" after first jump
+angles "0 0 0"
+- spawnpoint_02 at "11480 -6605 295" at top of first rope
+angles "0 40 0"
+- spawnpoint_temple at "11515 -5292 715"
+- spawnpoint_03 at "10890 -5145 85" after third courtyard
+angles "0 90 0"
+
+### l11_b2
+
+***Changes***
+##### trigger_changelevel landmark "info_landmark_L11_B1_B2"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "7856 -2376 661"
+- Added checkpoint outputs to 01.
+##### trigger_multiple "PlayerTriggerZoneB" at "7440 -2469.5 673.15", "7411 -2553 673.15", "7312 -1736 673.15", "7520 -1752 673.15", "7568 -690 553", "9010 -2076 776", "7356 -526 514"
+- Changed OnEndTouch to OnEndTouchAll
+##### npc_villager_male "Percy" at "7454 -2750 629.146"
+- Removed gameover outputs from Xana or player hit.
+- Made invulnerable.
+##### trigger_once at "9072 -3552 -96"
+- Changed to trigger_hurt with fall damage.
+##### trigger_once at "7360 -292 674"
+- Removed door closing outputs.
+##### momentary_rot_button "room05.grid.lever" at "7554.5 -926 705.77"
+- Locked from player interaction.
+##### func_door_rotating at "7532.5 -1575 716", "7760 -1030 716", "9631 -3043.5 328"
+- Added lock on open then unlock for next use (resolves spam close door).
+##### trigger_multiple "Percy.SequenceF.trigger" at "7356 -481 674"
+- Removed gate close on end touch.
+
+***Checkpoints***
+- spawnpoint_00 at "9733 -3297 260"
+angles "0 270 0"
+- spawnpoint_01 at "7770 -2470 675" at meeting with Percy
+angles "0 180 0"
+
+### l11_c
+
+***Added***
+##### Ballistas
+
+***Changes***
+##### trigger_once at "340 -184 -598"
+- Changed to trigger_hurt with fall damage.
+##### trigger_multiple at "2740 376 108"
+- Changed OnEndTouch to OnEndTouchAll.
+##### Balistas adjusted
+
+***Checkpoints***
+- spawnpoint_00 at "1785 -721 -775"
+angles "0 75 0"
+- spawnpoint_01 at "1305 -445 -345"
+angles "0 180 0"
