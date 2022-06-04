@@ -912,3 +912,95 @@ angles "0 180 0"
 angles "0 75 0"
 - spawnpoint_01 at "1305 -445 -345"
 angles "0 180 0"
+
+
+### l12_a
+
+***Changes***
+##### trigger_changelevel landmark "info_landmark_to_L12"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_multiple at "-374 263 -2659" and "-809.5 2444 -2242.5"
+- Changed to trigger_hurt.
+##### trigger_once "piege_04_trigger_02" at "-1305 512 -963"
+- Added checkpoint outputs to 01.
+##### func_button "levier_spawnWizard.prop_AA" at "245 1470 -577"
+- Added checkpoint outputs to 02.
+##### trigger_once at "-1520 1176.5 -1600"
+- Added checkpoint outputs to 03.
+##### trigger_once at "-1251 2524 -1195"
+- Added checkpoint outputs to 04.
+
+***Checkpoints***
+- spawnpoint_00 at "596 -1716 -463"
+angles "0 180 0"
+- spawnpoint_01 at "-1475 250 -1035" after first necromancer
+angles "0 90 0"
+- spawnpoint_02 at "5 1660 -570" at staircase after lich
+angles "0 290 0"
+- spawnpoint_03 at "-905 960 -1600" at bottom of stairs before casket optional open
+angles "0 170 0"
+- spawnpoint_04 at "-1275 2315 -1180" after cyclops in higher area
+angles "0 200 0"
+
+### l12_b
+
+***Changes***
+##### trigger_changelevel landmark "L12_A_LANDMARK"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "-780 4579.03 -895.27"
+- Added checkpoint outputs to 01.
+##### logic_relay "piege_02_start" at "-1061.58 3934.87 -1111"
+- Removed first door close, made second door only close once.
+##### func_button "funcBut_BB" at "-313 3666 -1616"
+- Removed door close.
+##### trigger_once at "150 4086 -1496"
+- Added checkpoint outputs to 02.
+- Removed output that closes door.
+##### trigger_multiple at "-496 6740 -1836"
+- Removed output that closes door.
+##### logic_relay "big_end_door_open" at "-467.6 4871.19 -1999"
+- Added checkpoint outputs to 03.
+##### trigger_once at "-496 5064 -1948"
+- Added teleport to 03 position.
+
+***Checkpoints***
+- spawnpoint_00 at "-1730.78 3210.01 -1655"
+angles "0 90 0"
+- spawnpoint_01 at "-680 4375 -1045" after first couple traps
+angles "0 180 0"
+- spawnpoint_02 at "5 4060 -1625" at lich room
+angles "0 90 0"
+- spawnpoint_03 at "-495 5080 -1970" after liches
+angles "0 90 0"
+
+### l12_c
+
+***Added***
+##### trigger_once at "2783.5 4216 -3526.5"
+- Sets spawnpoint to 02.
+
+***Removed***
+##### trigger_once at "777 3604 -2862"
+- Creates brush at start of map.
+
+***Changes***
+##### trigger_changelevel landmark "Landmark_L12_B-C"
+- Set spawnflags 6 (2 disable touch) (4 to previous chapter)
+##### trigger_once at "8486.31 5107.84 -3948", "2479 2532 -3836", "2587 5976 -3836", "7490.75 4275.65 -3134.5"
+- Changed to trigger_hurt.
+##### trigger_once at "625 4216 -2901.5"
+- Added checkpoint outputs to 01.
+##### trigger_multiple at "4262.5 4220 -3822.5"
+- Removed area portal close.
+##### logic_relay "go_stasis_destroy" at "3234 4222 -3723"
+- Added checkpoint outputs to 03.
+
+***Checkpoints***
+- spawnpoint_00 at "-1143.45 5167.35 -3055"
+angles "0 270 0"
+- spawnpoint_01 at "345 4220 -3020" meetup with leanna (if applicable)
+angles "0 0 0"
+- spawnpoint_02 at "1360 4775 -3675" entrance of arena
+angles "0 290 0"
+- spawnpoint_03 at "2900 4215 -3865" in front of altar
+angles "0 0 0"
