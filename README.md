@@ -31,7 +31,7 @@ These are all changes to lumps and potentially other files that will be needed f
 - spawnpoint_00 at "1165 339.496 1565" At the start
 angles "0 33.5 0"
 - spawnpoint_01 at "876 -2427 436" After the first rope.
-angles "0 90 0"
+angles "0 0 0"
 - spawnpoint_02 at "1405 -1335 40" At the zombie kick off part
 angles "0 90 0"
 
@@ -994,6 +994,8 @@ angles "0 90 0"
 - Removed area portal close.
 ##### logic_relay "go_stasis_destroy" at "3234 4222 -3723"
 - Added checkpoint outputs to 03.
+##### npc_leanna "leanna" at "683.723 4005.24 -3047.92"
+- Made invulnerable to player (if she exists by this point).
 
 ***Checkpoints***
 - spawnpoint_00 at "-1143.45 5167.35 -3055"
