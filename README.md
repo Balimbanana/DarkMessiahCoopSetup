@@ -42,6 +42,7 @@ angles "0 90 0"
 ***Removed***
 - func_brush "Grange_playerclip" at "1755 -85 904"
 - func_brush "PlayerClip.House" at "1631.75 -599.5 402.5"
+- trigger_once "trigger_death" at "-719 324 91"
 - player_loadsaved "player_loadsaved.fallydeath" at "1744 376 748"
 
 ***Changes***
@@ -49,6 +50,8 @@ angles "0 90 0"
 - Removed spawnflag "Use Activates" (512) to prevent player interaction
 ##### scripted_sequence "sequence_guard_call_before_attack" at "265 -1890 -8.99999"
 - Added player teleport and checkpoint 01 activation This is the same entity that sends CinematicEnd()
+##### trigger_once at "-1120.5 -134.5 -211"
+- Changed to trigger_hurt
 ##### trigger_once at "1801 135 908.5"
 - Removed rope destruction outputs
 ##### trigger_once at "1804 -645.45 867.5"
