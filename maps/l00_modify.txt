@@ -1,0 +1,120 @@
+l00
+{
+	Add
+	{
+		// Spawnpoints
+		"info_player_start"
+		{
+			"origin" "1165 340 1565"
+			"angles" "0 33.5 0"
+			"targetname" "spawnpoint_00"
+			"spawnflags" "1"
+		}
+		
+		// After first rope
+		"info_player_start"
+		{
+			"origin" "860 -2435 395"
+			"angles" "0 0 0"
+			"targetname" "spawnpoint_01"
+			"spawnflags" "0"
+		}
+		
+		// At the zombie kick off part
+		"info_player_start"
+		{
+			"origin" "1405 -1335 40"
+			"angles" "0 90 0"
+			"targetname" "spawnpoint_02"
+			"spawnflags" "0"
+		}
+		
+		
+		// Weapon pickup duplicates (inputs to this in Modify section)
+		"point_template"
+		{
+			"targetname" "weapon_sword_template"
+			"Template01" "weapon_sword"
+			"spawnflags" "3"
+		}
+		
+		// Replaced triggers
+		"trigger_teleport"
+		{
+			"origin" "1408 -919 -36"
+			"targetname" "tuto_kick_undead.npc_undead.trigger2"
+			"model" "*25"
+			"target" "player_teleport.kick_undead"
+			"spawnflags" "1"
+			"startdisabled" "0"
+			"OnStartTouch" "tuto_kick_undead.npc_undead,Kill,,0,-1,1,"
+			"OnStartTouch" "tuto_kick_undead.npc_undead.template,ForceSpawn,,0.01,-1,1,"
+		}
+		
+		// Remade to remove close door outputs
+		"trigger_once"
+		{
+			"origin" "1408 204 -256"
+			"spawnflags" "1"
+			"model" "*48"
+			"OnStartTouch" "tuto_fight.kick.relay,Trigger,,0,-1,1,"
+			"OnStartTouch" "PlayerEnterCombatArea,SetValue,1,0,-1,1,"
+		}
+	}
+	
+	Modify
+	{
+		TargetName
+		{
+			// Weapon pickup duplicates
+			"weapon_sword"
+			{
+				"OnPlayerPickup" "weapon_sword_template,ForceSpawn,,0,-1,1,"
+			}
+			
+			// Prevent text from repeating
+			"tuto_belt.game_text3a.relay"
+			{
+				"OnTrigger" "tuto_inventory.game_text2b.relay,kill,,0,-1,1,"
+				"OnTrigger" "!self,kill,,0,-1,1,"
+			}
+			
+			// Change point_teleport to info_player_teleport so it doesn't teleport all players
+			"point_teleport.kick_undead"
+			{
+				"classname" "info_player_teleport"
+				"targetname" "player_teleport.kick_undead"
+				"target" "!activator"
+			}
+		}
+		Origin
+		{
+			// Spawnpoint outputs added to triggers
+			"876 -2427 436"
+			{
+				"OnStartTouch" "spawnpoint_00,kill,,0,-1,1,"
+				"OnStartTouch" "spawnpoint_01,AddOutput,spawnflags 1,0,-1,1,"
+			}
+			
+			"1408 -1460 127"
+			{
+				"OnStartTouch" "spawnpoint_01,kill,,0,-1,1,"
+				"OnStartTouch" "spawnpoint_02,AddOutput,spawnflags 1,0,-1,1,"
+			}
+		}
+	}
+	
+	Remove
+	{
+		Classname
+		{
+			"info_player_start" {}
+		}
+		Origin
+		{
+			// Replaced triggers
+			"1408 -919 -36" {}
+			"1408 204 -256" {}
+		}
+	}
+}
